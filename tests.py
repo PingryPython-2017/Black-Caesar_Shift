@@ -1,9 +1,9 @@
 import caesar_shift
 
-print("Hello shifted by 1 is {}".format(caesar_shift.caesars_shift("hello", 1)))
+print("\nHello shifted by 1 is {}".format(caesar_shift.caesar_cipher("hello", 1)))
 
-print("ORNDORFF shifted by 5 is {}".format(caesar_shift.caesars_shift("ORNDORFF", 5)))
+print("\nORNDORFF shifted by 5 is {}".format(caesar_shift.caesar_cipher("ORNDORFF", 5)))
 
-print("_ shifted by -9 is {}".format(caesar_shift.caesars_shift("", -9)))
+print("\n_ shifted by 9 is {}".format(caesar_shift.caesar_cipher("_", 9)))
 
-print("a shifted by 80 is {}".format(caesar_shift.caesars_shift("a", 80)))
+print("\na shifted by 80 is {}\n".format(caesar_shift.caesar_cipher("a", 80)))
