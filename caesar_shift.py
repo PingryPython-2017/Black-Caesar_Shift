@@ -4,13 +4,17 @@ def caesar_cipher(text, shift):
 		return ""
 	character = text[0]
 	character = ord(character)
-	
-	if character <= 126 - shift:
+	shift = int(shift)
+	if character <= asciiMax - shift:
 		character += shift
 
 	# Terminating Case
-	elif character <= 126:
-		character = character - 126 + 31 + shift
+	elif character <= asciiMax:
+		character = character - asciiMax + asciiMin + shift
 	character = chr(character)
 	
 	return character + caesar_cipher(text[1:], shift)
+
+# Created variables to represent ascii minimum and maximum
+asciiMin = 31
+asciiMax = 126
